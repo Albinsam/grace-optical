@@ -19,6 +19,7 @@ export default function CollectionPreview() {
               src={frame1}
               alt="Premium Frames"
               className="w-full h-60 object-cover rounded-t-lg"
+              loading="lazy"
             />
             <div className="p-6 text-center">
               <h3 className="text-xl font-semibold mb-2">
@@ -33,6 +34,7 @@ export default function CollectionPreview() {
               src={frame2}
               alt="Lens Varieties"
               className="w-full h-60 object-cover rounded-t-lg"
+              loading="lazy"
             />
             <div className="p-6 text-center">
               <h3 className="text-xl font-semibold mb-2">
@@ -47,6 +49,7 @@ export default function CollectionPreview() {
               src={frame3}
               alt="Eye Testing"
               className="w-full h-60 object-cover rounded-t-lg"
+              loading="lazy"
             />
             <div className="p-6 text-center">
               <h3 className="text-xl font-semibold mb-2">

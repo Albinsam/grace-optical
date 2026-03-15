@@ -25,6 +25,7 @@ export default function FullAbout() {
             src={store}
             className="rounded-xl shadow-xl"
             alt="Grace Optical Store"
+            loading="lazy"
           />
           <div>
             <h2 className="text-2xl font-heading mb-4">Our Journey</h2>
