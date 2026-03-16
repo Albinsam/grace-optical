@@ -4,16 +4,16 @@ export default function HoverCard({ children }) {
   return (
     <motion.div
       whileHover={{
-        y: -12,
-        scale: 1.03,
-        boxShadow: "0px 25px 60px rgba(0,0,0,0.18)",
+        y: -14,
+        scale: 1.04,
+        boxShadow: "0px 35px 80px rgba(0,0,0,0.22)",
       }}
       transition={{
         type: "spring",
-        stiffness: 180,
-        damping: 18,
+        stiffness: 140,
+        damping: 14,
       }}
-      className="cursor-pointer"
+      className="cursor-pointer will-change-transform"
     >
       {children}
     </motion.div>

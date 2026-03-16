@@ -1,36 +1,30 @@
-import FadeIn from "./FadeIn"
-
-import brand1 from "../assets/brand1.png"
-import brand2 from "../assets/brand2.jfif"
-import brand3 from "../assets/brand3.jfif"
-import brand4 from "../assets/brand4.jfif"
-import brand5 from "../assets/brand5.jfif"
+import brand1 from "../assets/brand1.png";
+import brand2 from "../assets/brand2.jfif";
+import brand3 from "../assets/brand3.jfif";
+import brand4 from "../assets/brand4.jfif";
+import brand5 from "../assets/brand5.jfif";
+import { motion } from "framer-motion";
 
 export default function BrandLogos() {
-  const brands = [brand1, brand2, brand3, brand4, brand5]
+  const brands = [brand1, brand2, brand3, brand4, brand5];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container-custom px-6">
+    <section className="py-24 bg-white text-center">
+      <h2 className="text-3xl font-heading mb-12">
+        Trusted Optical Brands We Carry
+      </h2>
 
-        <FadeIn delay={0.2}>
-          <h2 className="text-2xl font-heading text-center mb-10 text-brandBlack">
-            Trusted Brands We Offer
-          </h2>
-        </FadeIn>
-
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
-          {brands.map((logo, idx) => (
-            <FadeIn key={idx} delay={0.3 + idx * 0.1}>
-              <img
-                src={logo}
-                className="mx-auto h-16 md:h-20 object-contain opacity-80 hover:opacity-100 transition"
-              />
-            </FadeIn>
-          ))}
-        </div>
-
+      <div className="container-custom flex flex-wrap justify-center items-center gap-16 px-6">
+        {brands.map((logo, i) => (
+          <motion.img
+            key={i}
+            src={logo}
+            alt="Optical Brand"
+            className="h-12 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition duration-500"
+            whileHover={{ scale: 1.15 }}
+          />
+        ))}
       </div>
     </section>
-  )
+  );
 }

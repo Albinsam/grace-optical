@@ -9,6 +9,11 @@ body {
 .container-custom {
   max-width: 1200px;
   margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

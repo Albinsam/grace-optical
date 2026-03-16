@@ -18,6 +18,7 @@ import { AnimatePresence } from "framer-motion"
 import PageTransition from "./components/PageTransition"
 import ScrollProgress from "./components/ScrollProgress";
 import WhatsappButton from "./components/WhatsappButton";
+import PremiumFooter from "./components/PremiumFooter";
 
 export default function App() {
 
@@ -46,7 +47,7 @@ export default function App() {
         </Routes>
       </AnimatePresence>
 
-      <Footer />
+      <PremiumFooter />
       <WhatsappButton />
     </>
   )

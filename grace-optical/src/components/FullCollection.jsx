@@ -32,15 +32,14 @@ export default function FullCollection() {
   ];
 
   return (
-    <section className="py-16 bg-brandWhite font-body">
+    <section className="py-20 md:py-28 bg-brandWhite font-body">
 
       {/* PAGE HEADING */}
       <FadeIn delay={0.2}>
         <div className="text-center mb-12 px-4">
-          <h1 className="text-3xl md:text-4xl font-heading text-brandBlack">
-            Our Collection
+          <h1 className="text-4xl md:text-5xl font-heading text-brandBlack">            Our Collection
           </h1>
-          <p className="text-gray-600 mt-3 text-sm md:text-base">
+          <p className="text-gray-600 mt-4 text-base md:text-lg max-w-xl mx-auto">
             Discover premium frames crafted for comfort & style
           </p>
         </div>
@@ -48,7 +47,7 @@ export default function FullCollection() {
 
       {/* FRAMES GRID */}
       <motion.div
-        className="container-custom grid sm:grid-cols-2 md:grid-cols-4 gap-6"
+      className="container-custom grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-6"
         initial="hidden"
         animate="visible"
         variants={{
@@ -70,13 +69,11 @@ export default function FullCollection() {
             transition={{ duration: 0.5 }}
           >
             <HoverCard>
-              <div className="border rounded-xl shadow overflow-hidden bg-white">
-                <img
+<div className="rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 overflow-hidden bg-white">                <img
                   loading="lazy"
                   src={frame.img}
                   alt={frame.title}
-                  className="w-full h-56 object-cover"
-                />
+                  className="w-full h-72 object-cover"                />
 
                 <div className="p-4 text-center">
                   <h3 className="text-lg font-heading mb-1 text-brandBlack">
