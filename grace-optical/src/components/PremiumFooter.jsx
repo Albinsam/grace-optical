@@ -27,11 +27,11 @@ export default function PremiumFooter() {
         >
           <h3 className="text-xl font-heading mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-400">
-            <li>Home</li>
-            <li>Collection</li>
-            <li>Lens Guide</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><a href="/" className="hover:text-white">Home</a></li>
+            <li><a href="/collection" className="hover:text-white">Collection</a></li>
+            <li><a href="/lens-guide" className="hover:text-white">Lens Guide</a></li>
+            <li><a href="/about" className="hover:text-white">About</a></li>
+            <li><a href="/contact" className="hover:text-white">Contact</a></li>
           </ul>
         </motion.div>
 
@@ -42,19 +42,20 @@ export default function PremiumFooter() {
           transition={{ duration: 1 }}
         >
           <h3 className="text-xl font-heading mb-4">Visit Us</h3>
-          <p className="text-gray-400">
-            Grace Optical Gallery  
-            <br />
-            Adoor, Kerala  
-            <br />
-            Phone: +91 XXXXX XXXXX
+          <p className="text-gray-400 leading-7">
+            Grace Optical Gallery <br />
+            Santhosh Building <br />
+            West of Govt Hospital <br />
+            Adoor, Kerala 691523 <br /><br />
+            Phone: 04734 227 850 <br />
+            Email: graceopticalgallery@gmail.com
           </p>
         </motion.div>
 
       </div>
 
       <div className="text-center mt-16 text-gray-500 text-sm">
-        © {new Date().getFullYear()} Grace Optical Gallery. All rights reserved.
+        © 2013–{new Date().getFullYear()} Grace Optical Gallery. All rights reserved.
       </div>
     </footer>
   );

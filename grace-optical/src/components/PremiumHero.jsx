@@ -21,8 +21,7 @@ export default function PremiumHero() {
           </h1>
 
           <p className="text-gray-600 text-base md:text-lg mb-10 max-w-lg">
-            Experience advanced eye diagnostics and premium eyewear
-            collections crafted to enhance clarity, comfort and confidence.
+            Experience advanced eye diagnostics and premium eyewear collections crafted to enhance clarity, comfort, and confidence.
           </p>
 
           <button className="bg-brandRed text-white px-10 py-5 text-lg rounded-2xl shadow-2xl hover:scale-105 hover:shadow-red-300/40 transition duration-300">
@@ -38,7 +37,7 @@ export default function PremiumHero() {
         >
           <img
             src={heroImg}
-            alt="Premium Eyewear"
+            alt="Premium eyewear on display for precision and style" // UPDATED ALT TEXT
             className="rounded-3xl shadow-2xl w-full object-cover"
           />
         </motion.div>

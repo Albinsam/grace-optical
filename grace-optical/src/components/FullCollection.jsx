@@ -16,6 +16,7 @@ import FadeIn from "../components/FadeIn";
 import HoverCard from "../components/HoverCard";
 
 export default function FullCollection() {
+
   const frames = [
     { img: frame1, title: "Men's Classic", desc: "Timeless style with sturdy frames." },
     { img: frame2, title: "Men's Modern", desc: "Sleek frames for a contemporary look." },
@@ -28,61 +29,46 @@ export default function FullCollection() {
     { img: frame9, title: "Kids Learning", desc: "Comfortable frames for school use." },
     { img: frame10, title: "Computer Glasses", desc: "Reduce blue light and eye strain." },
     { img: frame11, title: "Photochromic Lenses", desc: "Frames with auto-darkening lenses." },
-    { img: frame12, title: "Premium Designer", desc: "Exclusive collection for a luxury look." },
+    { img: frame12, title: "Premium Designer", desc: "Exclusive luxury collection." },
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-brandWhite font-body">
+    <section className="py-20 md:py-28 bg-white">
 
-      {/* PAGE HEADING */}
       <FadeIn delay={0.2}>
         <div className="text-center mb-12 px-4">
-          <h1 className="text-4xl md:text-5xl font-heading text-brandBlack">            Our Collection
+          <h1 className="text-4xl md:text-5xl font-heading">
+            Our Collection
           </h1>
-          <p className="text-gray-600 mt-4 text-base md:text-lg max-w-xl mx-auto">
+          <p className="text-gray-600 mt-4 max-w-xl mx-auto">
             Discover premium frames crafted for comfort & style
           </p>
         </div>
       </FadeIn>
 
-      {/* FRAMES GRID */}
       <motion.div
-      className="container-custom grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-6"
+        className="container-custom grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-6"
         initial="hidden"
         animate="visible"
-        variants={{
-          hidden: {},
-          visible: {
-            transition: {
-              staggerChildren: 0.07
-            }
-          }
-        }}
       >
         {frames.map((frame, idx) => (
-          <motion.div
-            key={idx}
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 }
-            }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div key={idx}>
             <HoverCard>
-<div className="rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 overflow-hidden bg-white">                <img
-                  loading="lazy"
-                  src={frame.img}
-                  alt={frame.title}
-                  className="w-full h-72 object-cover"                />
+              <div className="rounded-xl shadow-lg overflow-hidden bg-white">
+
+                <div className="w-full h-72 overflow-hidden">
+                  <img
+                    src={frame.img}
+                    alt={frame.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
                 <div className="p-4 text-center">
-                  <h3 className="text-lg font-heading mb-1 text-brandBlack">
-                    {frame.title}
-                  </h3>
-                  <p className="text-gray-600 text-xs md:text-sm">
-                    {frame.desc}
-                  </p>
+                  <h3 className="font-heading">{frame.title}</h3>
+                  <p className="text-gray-600 text-sm">{frame.desc}</p>
                 </div>
+
               </div>
             </HoverCard>
           </motion.div>

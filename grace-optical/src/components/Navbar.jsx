@@ -30,9 +30,30 @@ export default function Navbar() {
 
         <ul className="flex gap-8">
 
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/collection">Collection</NavLink></li>
-          <NavLink
+          <li>
+            <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-brandRed font-semibold" : "hover:text-brandRed"
+            }
+          >
+            Home
+          </NavLink>
+          </li>
+          
+          <li>
+            <NavLink
+            to="/collection"
+            className={({ isActive }) =>
+              isActive ? "text-brandRed font-semibold" : "hover:text-brandRed"
+            }
+          >
+            Collection
+          </NavLink>
+          </li>
+
+          <li>
+            <NavLink
             to="/full-lens-guide"
             className={({ isActive }) =>
               isActive ? "text-brandRed font-semibold" : "hover:text-brandRed"
@@ -40,6 +61,8 @@ export default function Navbar() {
           >
             Lens Guide
           </NavLink>
+          </li>
+          
           <li>
             <NavLink
               to="/full-clinical"

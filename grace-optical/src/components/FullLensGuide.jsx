@@ -23,8 +23,12 @@ const lenses = [
 
 export default function FullLensGuide() {
   return (
-    <section className="py-16 bg-brandWhite font-body">
+    <section
+      className="py-16 bg-brandWhite font-body"
+      aria-label="Guide to our lens technologies"
+    >
       <div className="container-custom px-6">
+        {/* Page Heading */}
         <h1 className="text-4xl font-heading text-brandBlack text-center mb-12">
           Lens Guide
         </h1>
@@ -32,6 +36,7 @@ export default function FullLensGuide() {
           Learn about our lens technologies to protect and enhance your vision.
         </p>
 
+        {/* Lens Cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {lenses.map((lens, index) => (
             <motion.div
@@ -44,14 +49,14 @@ export default function FullLensGuide() {
             >
               <img
                 src={lens.img}
-                alt={lens.title}
+                alt={`${lens.title} - ${lens.desc}`}
                 className="w-full h-60 object-cover"
                 loading="lazy"
               />
               <div className="p-4 text-center">
-                <h3 className="text-xl font-heading mb-2 text-brandBlack">
+                <h2 className="text-xl font-heading mb-2 text-brandBlack">
                   {lens.title}
-                </h3>
+                </h2>
                 <p className="text-gray-600 text-sm">{lens.desc}</p>
               </div>
             </motion.div>

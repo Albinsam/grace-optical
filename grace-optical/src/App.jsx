@@ -25,8 +25,9 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <>
-    <ScrollProgress />
+    <div className="overflow-x-hidden"> {/* <-- Added this wrapper */}
+
+      <ScrollProgress />
       <Navbar />
 
       <AnimatePresence mode="wait">
@@ -49,6 +50,6 @@ export default function App() {
 
       <PremiumFooter />
       <WhatsappButton />
-    </>
+    </div>
   )
 }

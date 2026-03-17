@@ -5,6 +5,8 @@ export default function Hero() {
     <section
       className="relative h-[90vh] bg-cover bg-center"
       style={{ backgroundImage: `url(${heroImg})` }}
+      role="img"
+      aria-label="Hero image showing Grace Optical Gallery with stylish glasses display"
     >
       <div className="absolute inset-0 bg-black/50"></div>
 
@@ -19,11 +21,17 @@ export default function Hero() {
           </p>
 
           <div className="flex justify-center gap-6">
-            <button className="bg-white text-black px-6 py-3 rounded font-semibold">
+            <button
+              className="bg-white text-black px-6 py-3 rounded font-semibold"
+              aria-label="Book your eye test at Grace Optical Gallery"
+            >
               Book Eye Test
             </button>
 
-            <button className="border border-white px-6 py-3 rounded">
+            <button
+              className="border border-white px-6 py-3 rounded"
+              aria-label="View Grace Optical Gallery's collection of frames"
+            >
               View Collection
             </button>
           </div>

@@ -2,28 +2,31 @@ import brand1 from "../assets/brand1.png";
 import brand2 from "../assets/brand2.jfif";
 import brand3 from "../assets/brand3.jfif";
 import brand4 from "../assets/brand4.jfif";
-import brand5 from "../assets/brand5.jfif";
-import { motion } from "framer-motion";
 
 export default function BrandLogos() {
-  const brands = [brand1, brand2, brand3, brand4, brand5];
+  const brands = [brand1, brand2, brand3, brand4];
 
   return (
-    <section className="py-24 bg-white text-center">
-      <h2 className="text-3xl font-heading mb-12">
-        Trusted Optical Brands We Carry
-      </h2>
+    <section className="py-20 bg-gray-50">
+      <div className="container-custom px-6">
+        <h2 className="text-3xl font-heading text-center mb-12">
+          Our Trusted Brands
+        </h2>
 
-      <div className="container-custom flex flex-wrap justify-center items-center gap-16 px-6">
-        {brands.map((logo, i) => (
-          <motion.img
-            key={i}
-            src={logo}
-            alt="Optical Brand"
-            className="h-12 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition duration-500"
-            whileHover={{ scale: 1.15 }}
-          />
-        ))}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 items-center justify-items-center">
+          {brands.map((logo, idx) => (
+            <div
+              key={idx}
+              className="transition transform hover:scale-110 duration-300"
+            >
+              <img
+                src={logo}
+                alt={`Brand ${idx + 1}`}
+                className="h-20 sm:h-24 object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import store from "../assets/store.jpg";
-import team1 from "../assets/team1.jpg"; // download your team photos
+import team1 from "../assets/team1.jpg";
 import team2 from "../assets/optometrist1.jpg";
 import team3 from "../assets/team3.jpg";
 
@@ -9,22 +9,22 @@ export default function FullAbout() {
     <section className="bg-white font-body">
 
       {/* PAGE HEADING */}
-      <div className="pt-28 pb-10 bg-gray-50 text-center">
+      <header className="pt-28 pb-10 bg-gray-50 text-center">
         <h2 className="text-lg tracking-widest text-gray-500 uppercase mb-3">
           About Grace Optical
         </h2>
         <h1 className="text-4xl font-heading text-black">
           Trusted Vision Care Since 2013
         </h1>
-      </div>
+      </header>
 
       {/* STORY SECTION */}
-      <div className="py-20">
+      <section className="py-20" aria-label="Our Journey Story">
         <div className="container-custom px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
             src={store}
             className="rounded-xl shadow-xl"
-            alt="Grace Optical Store"
+            alt="Interior view of Grace Optical Gallery store"
             loading="lazy"
           />
           <div>
@@ -42,10 +42,10 @@ export default function FullAbout() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* TRUST STATS */}
-      <div className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-20" aria-label="Our Experience Stats">
         <div className="container-custom px-6 grid md:grid-cols-3 text-center gap-10">
           <div>
             <h3 className="text-4xl font-heading text-black mb-2">13+</h3>
@@ -60,46 +60,48 @@ export default function FullAbout() {
             <p className="text-gray-600">Happy Customers</p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* TEAM SECTION */}
-      <div className="py-20 bg-white">
+      <section className="py-20 bg-white" aria-label="Meet Our Team">
         <h2 className="text-4xl font-heading text-center text-black mb-12">
           Meet Our Team
         </h2>
         <div className="container-custom px-6 grid md:grid-cols-3 gap-8">
-
-          {[team1, team2, team3].map((member, index) => (
-            <motion.div
-              key={index}
-              className="border rounded-lg overflow-hidden shadow hover:shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-            >
-              <img src={member} alt={`Team member ${index + 1}`} className="w-full h-64 object-cover" />
-              <div className="p-4 text-center">
-                <h3 className="text-xl font-heading mb-1 text-black">
-                  {index === 0 ? "Dr. Ajay Thomas" : index === 1 ? "Sara Mathew" : "John Kurian"}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {index === 0 ? "Lead Optometrist" : index === 1 ? "Optician" : "Customer Care"}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-
+          {[team1, team2, team3].map((member, index) => {
+            const names = ["Dr. Ajay Thomas", "Sara Mathew", "John Kurian"];
+            const roles = ["Lead Optometrist", "Optician", "Customer Care"];
+            return (
+              <motion.div
+                key={index}
+                className="border rounded-lg overflow-hidden shadow hover:shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+              >
+                <img
+                  src={member}
+                  alt={`Photo of ${names[index]}, ${roles[index]}`}
+                  className="w-full h-64 object-cover"
+                  loading="lazy"
+                />
+                <div className="p-4 text-center">
+                  <h3 className="text-xl font-heading mb-1 text-black">{names[index]}</h3>
+                  <p className="text-gray-600 text-sm">{roles[index]}</p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
-      </div>
+      </section>
 
       {/* TESTIMONIALS SECTION */}
-      <div className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" aria-label="Customer Testimonials">
         <h2 className="text-4xl font-heading text-center text-black mb-12">
           What Our Customers Say
         </h2>
         <div className="container-custom px-6 grid md:grid-cols-3 gap-8">
-          
           {[
             { name: "Anjali R.", comment: "Excellent service and very friendly staff." },
             { name: "Rahul P.", comment: "High quality frames and lenses. Highly recommend." },
@@ -117,12 +119,11 @@ export default function FullAbout() {
               <h4 className="text-lg font-heading text-black">{testimonial.name}</h4>
             </motion.div>
           ))}
-
         </div>
-      </div>
+      </section>
 
       {/* BRAND STRIP */}
-      <div className="bg-black text-white py-16 text-center">
+      <section className="bg-black text-white py-16 text-center" aria-label="Premium Optical Experience">
         <h2 className="text-3xl font-heading mb-4">
           Premium Optical Experience in Adoor
         </h2>
@@ -131,7 +132,7 @@ export default function FullAbout() {
           Grace Optical ensures the perfect balance of vision clarity and
           aesthetic confidence.
         </p>
-      </div>
+      </section>
 
     </section>
   );
