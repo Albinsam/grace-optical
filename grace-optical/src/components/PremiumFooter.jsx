@@ -29,9 +29,10 @@ export default function PremiumFooter() {
           <ul className="space-y-2 text-gray-400">
             <li><a href="/" className="hover:text-white">Home</a></li>
             <li><a href="/collection" className="hover:text-white">Collection</a></li>
-            <li><a href="/lens-guide" className="hover:text-white">Lens Guide</a></li>
-            <li><a href="/about" className="hover:text-white">About</a></li>
-            <li><a href="/contact" className="hover:text-white">Contact</a></li>
+            <li><a href="/full-lens-guide" className="hover:text-white">Lens Guide</a></li>
+            <li><a href="/full-clinical" className="hover:text-white">Clinical</a></li>
+            <li><a href="/full-about" className="hover:text-white">About</a></li>
+            <li><a href="/full-contact" className="hover:text-white">Contact</a></li>
           </ul>
         </motion.div>
 
